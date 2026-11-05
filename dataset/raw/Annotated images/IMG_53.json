@@ -1,0 +1,36 @@
+{
+  "version": "7.9.2.dev274+g67d642595",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "med_box",
+      "points": [
+        [
+          729.595417114214,
+          22.69960615825276
+        ],
+        [
+          955.0733977801646,
+          302.25563909774434
+        ],
+        [
+          505.0340136054421,
+          663.3870390261367
+        ],
+        [
+          283.2223415682062,
+          388.4138918725384
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\Images\\IMG_53.jpeg",
+  "imageData": null,
+  "imageHeight": 720,
+  "imageWidth": 1280
+}
