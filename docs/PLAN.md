@@ -36,8 +36,26 @@ Items 8 and 9 start only after item 5 is finished.
 - Perspective correction for a tilted plane. Tilt is measured as the breaking condition and refused beyond a threshold instead.
 - Mobile / edge deployment.
 
-## Decision record (completed at the end)
+## Changes from the plan (added during the work)
 
-- Approach taken: _
-- Approach rejected: _
-- What rejecting it cost: _
+- Training ran on the laptop CPU for 7 epochs (59 minutes), not on a GPU. Cause: no GPU was set up and time was short.
+- The reference coin is found with a Hough circle and ellipse fit. It was not labelled as a second class.
+- The coin lies on the table, the box top is 51 mm higher. The photos could not be retaken, so the measurement
+  code corrects the scale for that height.
+- Breaking condition changed from camera tilt to distance from the frame centre, because it can be
+  measured from the existing photos. Tilt is only guarded by the coin axis ratio.
+- Four checkerboard photos and 27 object photos were taken sideways and are rotated to portrait.
+- Accuracy target (MO-1) was missed; see `docs/OBJECTIVES.md`.
+
+## Decision record
+
+- **Approach taken:** Mask R-CNN (COCO-pretrained, fine-tuned on 49 images) for the box outline; the coin
+  found by classical circle detection; scale from the coin diameter, corrected for the 51 mm height
+  difference between the coin plane and the box top with a pinhole model (mm per pixel = Z / f).
+- **Approach rejected:** retaking the photos with the reference lying in the same plane as the measured
+  face (coin on top of the box), which is what the brief asks for and needs no height assumption.
+- **What rejecting it cost:** the scale now depends on a measured thickness (51 mm). One millimetre of
+  error in that value changes the scale by about 0.6%, roughly 0.5 mm on the 81 mm side. It also assumes
+  the camera looks straight down. The existing 70 labelled photos were kept, which saved relabelling. The error
+  floor from the 3-D box shape (side faces entering the mask) is probably also larger than it would be
+  with a flat reference, but I did not measure that.
