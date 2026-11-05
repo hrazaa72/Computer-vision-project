@@ -8,7 +8,7 @@ All numbers are raw output from this repository, produced on the machine below.
 |---|---|
 | CPU / RAM / GPU | Intel Core i7-8650U (4 cores, 8 threads), 15.8 GB, no usable GPU (Intel UHD 620) |
 | OS / Python | Windows 11 Pro, Python 3.13.5, torch 2.15.0 (CPU), torchvision 0.29.2, OpenCV 5.0.0.93 |
-| Camera | [FILL IN: phone model], 720 x 1280 portrait, focus / zoom locked |
+| Camera | Infinix Hot 50 Pro+, 720 x 1280 portrait, focus / zoom locked |
 | Object | medicine box, top face 81 x 51 mm, 51 mm tall. Reference: 22 mm coin on the table |
 | Ground truth | 81 x 51 mm, calliper. One physical box, photographed 21 times, so every instance has the same true size |
 
