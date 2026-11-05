@@ -5,7 +5,7 @@ Branch `dev-test01`. This file and `dataset/splits/` are committed before any co
 ## Setup (fill in before submitting)
 
 - Object: medicine box (`med_box`), 81 x 51 mm (length x width). Chosen because it is rigid, flat-faced and easy to photograph repeatedly.
-- Reference object: coin, 2 mm thick, diameter TO CONFIRM (2.2 mm was noted, which looks like a typo; re-measure with calliper), lying in the same plane as the object in every photo.
+- Reference object: coin, 22 mm diameter, 2 mm thick (calliper-measured), lying in the same plane as the object in every photo.
 - Camera: phone, 1280x720 portrait, focus / zoom / resolution locked.
 - Checkerboard: 20 images in `calibration/images/`. 7 x 9 inner corners, square size 22 mm (calliper-measured).
 
